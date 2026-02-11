@@ -615,15 +615,39 @@ function App() {
                   ❤️
                 </span>
               </div>
-              <button
-                className="close-celebration"
-                onClick={() => {
-                  setShowCelebration(false);
-                  setCelebrationStage(0);
+              <div
+                style={{
+                  display: "flex",
+                  gap: "1rem",
+                  justifyContent: "center",
+                  marginTop: "2rem",
                 }}
               >
-                Close ×
-              </button>
+                <a
+                  href="/app"
+                  className="cta-button-enhanced"
+                  style={{
+                    textDecoration: "none",
+                    fontSize: "1.1rem",
+                    padding: "1.2rem 2.5rem",
+                  }}
+                >
+                  ✨ Enter Your Space
+                </a>
+                <button
+                  className="close-celebration"
+                  onClick={() => {
+                    setShowCelebration(false);
+                    setCelebrationStage(0);
+                  }}
+                  style={{
+                    background: "transparent",
+                    border: "2px solid rgba(183, 110, 121, 0.5)",
+                  }}
+                >
+                  Close ×
+                </button>
+              </div>
             </div>
           </div>
         )}
