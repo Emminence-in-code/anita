@@ -517,10 +517,32 @@
   box-shadow: 0 20px 60px rgba(183, 110, 121, 0.8);
 }
 
+/* Button Container */
+.celebration-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
 /* ========== CELEBRATION MOBILE RESPONSIVE ========== */
 
 /* Tablet and Mobile */
 @media (max-width: 768px) {
+  /* Stack buttons vertically on mobile */
+  .celebration-buttons {
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .celebration-buttons > * {
+    width: 100%;
+    max-width: 320px;
+  }
   /* Reduce particle density on mobile */
   .confetti-epic:nth-child(n + 150) {
     display: none;

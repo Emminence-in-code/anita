@@ -211,8 +211,7 @@ function App() {
   const galleryItems = [
     {
       title: "My Love",
-      caption:
-        "Onye m hụrụ n'anya, if Valentine were a person, it would be you.",
+      caption: "Onye nwem, if Valentine were a person, it would be you.",
       subtitle: "(My love, if Valentine was human, it would be you.)",
       image:
         "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&h=1000&fit=crop",
@@ -220,8 +219,8 @@ function App() {
     {
       title: "Racing Hearts",
       caption:
-        "Do you know my heart starts racing every time you come online? A hụrụ m gị n'anya.",
-      subtitle: "(I love you.)",
+        "Do you know my heart starts racing every time you come online? ",
+      subtitle: "(I've fallen for you.)",
       image:
         "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&h=1000&fit=crop",
     },
@@ -244,7 +243,7 @@ function App() {
     {
       title: "Making It Official",
       caption:
-        "I love you deeply – I'm just using this Valentine to make it official.",
+        "I like you deeply – I'm just using this Valentine to make it official.",
       subtitle: "",
       image:
         "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&h=1000&fit=crop",
@@ -522,7 +521,7 @@ function App() {
               YES! 🖤
             </button>
             <button className="answer-button no">
-              No (this button doesn't work 😏)
+              No (this button doesn't work tho😏)
             </button>
           </div>
         </div>
@@ -615,14 +614,7 @@ function App() {
                   ❤️
                 </span>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  gap: "1rem",
-                  justifyContent: "center",
-                  marginTop: "2rem",
-                }}
-              >
+              <div className="celebration-buttons">
                 <a
                   href="/app"
                   className="cta-button-enhanced"
