@@ -213,80 +213,70 @@ function App() {
       title: "My Love",
       caption: "Onye nwem, if Valentine were a person, it would be you.",
       subtitle: "(My love, if Valentine was human, it would be you.)",
-      image:
-        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&h=1000&fit=crop",
+      image: "/album/photo_2026-02-13_16-36-54.jpg",
     },
     {
       title: "Racing Hearts",
       caption:
         "Do you know my heart starts racing every time you come online? ",
       subtitle: "(I've fallen for you.)",
-      image:
-        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&h=1000&fit=crop",
+      image: "/album/photo_2026-02-13_16-38-42.jpg",
     },
     {
       title: "Cupid's Job",
       caption:
         "Can I be honest? Your smile has taken over Cupid's job in my life.",
       subtitle: "",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=1000&fit=crop",
+      image: "/album/photo_2026-02-13_16-38-49.jpg",
     },
     {
       title: "Sweeter Than Chocolate",
       caption:
         "Are you chocolate? Because even Valentine gifts are not as sweet as you.",
       subtitle: "",
-      image:
-        "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=800&h=1000&fit=crop",
+      image: "/album/photo_2026-02-13_16-38-50.jpg",
     },
     {
       title: "Making It Official",
       caption:
         "I like you deeply – I'm just using this Valentine to make it official.",
       subtitle: "",
-      image:
-        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&h=1000&fit=crop",
+      image: "/album/photo_2026-02-13_16-38-52.jpg",
     },
     {
       title: "My Whole Bouquet",
       caption:
         "If Valentine is about red and roses, then you're my whole bouquet.",
       subtitle: "",
-      image:
-        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&h=1000&fit=crop",
+      image: "/album/photo_2026-02-13_16-38-54.jpg",
     },
     {
       title: "Space In Your Heart",
       caption:
         "There are many gifts in this world, but the only one I want is a small space in your heart.",
       subtitle: "",
-      image:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=1000&fit=crop",
+      image: "/album/photo_2026-02-13_16-38-57.jpg",
     },
     {
       title: "Real Hugs",
       caption:
         "Forget teddy bears; I'd rather be the one giving you real hugs after Valentine's Day.",
       subtitle: "",
-      image:
-        "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&h=1000&fit=crop",
+      image: "/album/photo_2026-02-13_16-38-59.jpg",
     },
     {
       title: "Heart Has Moved",
       caption:
         "If I send you flowers, it's not for show. It's my way of saying my heart has moved to your side.",
       subtitle: "",
-      image:
-        "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&h=1000&fit=crop",
+      image: "/album/photo_2026-02-13_16-39-01.jpg",
     },
     {
       title: "Lifetime Package",
       caption:
         "Valentine's Day is 24 hours, but with you, I'm thinking of a lifetime package.",
       subtitle: "",
-      image:
-        "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&h=1000&fit=crop",
+      image: "/album/photo_2026-02-13_16-40-44.jpg",
     },
   ];
 

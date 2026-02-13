@@ -69,6 +69,44 @@
   opacity: 0.8;
 }
 
+.logo-avatar-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+}
+
+.logo-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--app-rose-gold);
+  box-shadow: 0 5px 20px rgba(183, 110, 121, 0.4);
+  transition: var(--app-transition);
+}
+
+.logo-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(183, 110, 121, 0.6);
+}
+
+.logo-emoji {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  font-size: 1.5rem;
+  background: var(--app-rich-black);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--app-rose-gold);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
 .app-nav {
   list-style: none;
   padding: 0;
@@ -321,20 +359,165 @@
   margin: 0 0 2rem;
 }
 
+/* Page-specific Responsive Utilities */
+.mood-tracker-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  max-width: 1400px;
+}
+
+.editor-container {
+  max-width: 900px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-button {
+  display: none;
+  position: fixed;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 1001;
+  background: var(--app-gradient-rose);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  color: var(--app-white);
+  cursor: pointer;
+  box-shadow: var(--app-shadow-medium);
+  transition: var(--app-transition);
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-button:hover {
+  transform: scale(1.05);
+  box-shadow: var(--app-shadow-strong);
+}
+
+.mobile-menu-button:active {
+  transform: scale(0.95);
+}
+
+/* Mobile Menu Close Button */
+.mobile-menu-close {
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(183, 110, 121, 0.2);
+  border: 1px solid rgba(183, 110, 121, 0.3);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: var(--app-rose-gold);
+  cursor: pointer;
+  transition: var(--app-transition);
+  align-items: center;
+  justify-content: center;
+  z-index: 101;
+}
+
+.mobile-menu-close:hover {
+  background: rgba(183, 110, 121, 0.3);
+}
+
+/* Mobile Menu Backdrop */
+.mobile-menu-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  /* Show mobile menu button */
+  .mobile-menu-button {
+    display: flex;
+  }
+
+  /* Show backdrop when drawer is open */
+  .mobile-menu-backdrop {
+    display: block;
+  }
+
+  /* Sidebar transforms into drawer */
   .app-sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    border-right: none;
-    border-bottom: 1px solid rgba(183, 110, 121, 0.2);
-    padding: 1.5rem 0;
+    position: fixed;
+    width: 280px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-right: 1px solid rgba(183, 110, 121, 0.2);
+    border-bottom: none;
+    padding: 2rem 0;
+    overflow-y: auto;
+  }
+
+  .app-sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Show close button on mobile */
+  .mobile-menu-close {
+    display: flex;
   }
 
   .app-logo {
     padding: 0 1.5rem 1.5rem;
     margin-bottom: 1.5rem;
+    margin-top: 2rem;
   }
 
   .app-logo h1 {
@@ -342,35 +525,159 @@
   }
 
   .app-nav {
-    display: flex;
-    overflow-x: auto;
-    padding: 0 1rem;
+    display: block;
+    overflow-x: visible;
+    padding: 0;
   }
 
   .app-nav-link {
-    flex-shrink: 0;
-    padding: 0.8rem 1.5rem;
-    border-left: none;
-    border-bottom: 3px solid transparent;
+    flex-shrink: 1;
+    padding: 1rem 1.5rem;
+    border-left: 3px solid transparent;
+    border-bottom: none;
   }
 
   .app-nav-link:hover,
   .app-nav-link.active {
-    border-left: none;
-    border-bottom-color: var(--app-rose-gold);
+    border-left-color: var(--app-rose-gold);
+    border-bottom: none;
+    background: rgba(183, 110, 121, 0.1);
   }
 
+  /* Content adjustments */
   .app-content {
     margin-left: 0;
-    padding: 1.5rem;
+    padding: 5rem 1.5rem 1.5rem;
+  }
+
+  .app-header {
+    margin-bottom: 2rem;
   }
 
   .app-title {
-    font-size: clamp(2rem, 8vw, 3rem);
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
   }
 
-  .dashboard-grid {
+  .app-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Grid layouts */
+  .dashboard-grid,
+  .post-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  .dashboard-card {
+    padding: 1.5rem;
+  }
+
+  /* Mood Tracker - Stack calendar and form */
+  .mood-tracker-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-grid {
+    gap: 0.3rem;
+  }
+
+  /* Gallery responsive */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  /* Media grids */
+  .media-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.8rem;
+  }
+
+  /* Filter buttons */
+  .filter-buttons {
+    gap: 0.8rem;
+  }
+
+  /* Buttons */
+  .app-button,
+  .app-button-secondary {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  /* Editor specific */
+  .editor-container {
+    max-width: 100%;
+  }
+
+  /* Form inputs on mobile */
+  .app-input,
+  .app-textarea {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .app-sidebar {
+    width: 85vw;
+    max-width: 280px;
+  }
+
+  .app-content {
+    padding: 4.5rem 1rem 1rem;
+  }
+
+  .app-title {
+    font-size: clamp(1.6rem, 9vw, 2.2rem);
+  }
+
+  .dashboard-card-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dashboard-card-value {
+    font-size: 2rem;
+  }
+
+  /* Very small screens */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calendar-grid {
+    gap: 0.2rem;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filter-buttons > button {
+    width: 100%;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .app-sidebar {
+    overflow-y: auto;
+  }
+
+  .app-content {
+    padding: 4rem 1rem 1rem;
+  }
+}
+
+/* Prevent body scroll when drawer is open */
+body.drawer-open {
+  overflow: hidden;
 }
