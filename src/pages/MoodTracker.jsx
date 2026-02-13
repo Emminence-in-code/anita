@@ -124,14 +124,7 @@ function MoodTracker() {
           <p className="app-subtitle">How are you feeling today?</p>
         </header>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 400px",
-            gap: "2rem",
-            maxWidth: "1400px",
-          }}
-        >
+        <div className="mood-tracker-grid">
           {/* Calendar */}
           <div>
             <div
@@ -181,13 +174,7 @@ function MoodTracker() {
               </button>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(7, 1fr)",
-                gap: "0.5rem",
-              }}
-            >
+            <div className="calendar-grid">
               {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
                 <div
                   key={day}
