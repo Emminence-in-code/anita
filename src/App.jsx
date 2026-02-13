@@ -212,7 +212,7 @@ function App() {
     {
       title: "My Love",
       caption: "Onye nwem, if Valentine were a person, it would be you.",
-      subtitle: "(My love, if Valentine was human, it would be you.)",
+      subtitle: "Asa-mpete",
       image: "/album/photo_2026-02-13_16-36-54.jpg",
     },
     {
